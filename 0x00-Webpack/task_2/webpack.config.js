@@ -17,9 +17,18 @@ module.exports = {
         ]
       },
       {
-        test: /\.(png|jpe?g)$/,
-        use: 'url-loader'
-      }
+				test: /\.(gif|png|jpe?g|svg)$/i,
+				use: [
+					'url-loader',
+					{
+						loader: 'image-webpack-loader',
+						options: {
+							bypassOnDebug: true,
+							disable: true,
+						},
+					},
+				],
+			}
     ]
   }
 };

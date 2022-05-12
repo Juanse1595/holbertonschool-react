@@ -1,0 +1,16 @@
+.App-logo {
+  height: 30vh;
+}
+
+.App-header {
+  border-bottom: 1px solid red;
+}
+
+.App-header > h1 {
+  display: inline;
+  
+}
+
+.App-link {
+  color: #61dafb;
+}

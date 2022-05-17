@@ -3,8 +3,6 @@ function getFullYear() {
     return year.getFullYear();
 }
 
-
-
 function getFooterCopy(isIndex) {
     if (isIndex) {
         return 'Holberton School'
@@ -14,5 +12,7 @@ function getFooterCopy(isIndex) {
 }
 
 function getLatestNotification() {
-    return '<strong>Urgent requirement</strong> - complete by EOD'
+    return {__html: '<strong>Urgent requirement</strong> - complete by EOD'}
 }
+
+export { getFullYear, getFooterCopy, getLatestNotification }

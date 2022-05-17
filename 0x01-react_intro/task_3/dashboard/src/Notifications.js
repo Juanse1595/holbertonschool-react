@@ -1,6 +1,7 @@
 import React from "react";
 import './Notifications.css';
-import close_icon from './close_icon.png'
+import close_icon from './close-icon.png';
+import { getLatestNotification } from './utils';
 
 export default function notification() {
     return (
@@ -11,12 +12,16 @@ export default function notification() {
                 <li data-priority='urgent'>New resume available</li>
                 <li dangerouslySetInnerHTML={getLatestNotification()}></li>
             </ul>
-            <button style={{float: 'right'}} 
+            <button style={{position: 'absolute',
+            top: 10,
+            right: 10,
+            background: 'none',
+            border: 'none'}} 
             aria-label='Close'
             onClick={() => {
                 console.log('Close button has been clicked')
             }}>
-                <img src={close_icon}></img>
+                <img src={close_icon} alt='close-icon'></img>
             </button>
         </div>
     );

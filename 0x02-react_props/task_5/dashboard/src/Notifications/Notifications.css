@@ -1,0 +1,21 @@
+div.Notifications {
+    border: 1px dashed red;
+    padding: 2px;
+}
+
+[data-priority='default'] {
+    color: blue;
+}
+
+[data-priority='urgent'] {
+    color: red;
+}
+
+.Notifications li {
+    color: red;
+}
+
+.Notifications img {
+    width: 20px;
+    height: 20px;
+}

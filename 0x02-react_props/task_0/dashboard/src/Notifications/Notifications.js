@@ -1,16 +1,14 @@
 import React from "react";
 import './Notifications.css';
 import close_icon from './close-icon.png';
-import { getLatestNotification } from './utils';
 
-export default function notification() {
+function Notifications() {
     return (
         <div className="Notifications">
             <p>Here is the list of notifications</p>
             <ul>
                 <li data-priority='default'>New course available</li>
                 <li data-priority='urgent'>New resume available</li>
-                <li dangerouslySetInnerHTML={getLatestNotification()}></li>
             </ul>
             <button style={{position: 'absolute',
             top: 10,
@@ -26,3 +24,5 @@ export default function notification() {
         </div>
     );
 }
+
+export { Notifications }

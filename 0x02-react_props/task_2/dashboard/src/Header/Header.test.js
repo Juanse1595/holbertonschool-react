@@ -1,3 +1,4 @@
+import { shallow } from 'enzyme';
 import { Header } from '../Header/Header.js'
 
 describe('<Header/>', ()=> {

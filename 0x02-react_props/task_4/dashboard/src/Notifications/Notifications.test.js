@@ -9,11 +9,11 @@ describe('<Notifications/>', ()=> {
 
     it('Notifications renders three list items', () => {
         const wrapper = shallow(<Notifications />);
-        expect(wrapper.find('li').length).toBe(3);
+        expect(wrapper.exists('NotificationItem')).toBe(true);
     });
 
     it('Notifications renders the text Here is the list of notifications', ()=> {
         const wrapper = shallow(<Notifications />);
-        expect(wrapper.find('p').text()).toBe('Here is the list of notifications');
+        expect(wrapper.html()).toContain('New course available');
     })
 })

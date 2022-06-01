@@ -13,7 +13,7 @@ function CourseList({listCourses}) {
             </thead>
             <tbody>
                 {listCourses === [] && <CourseListRow textFirstCell="No course available" textSecondCell="60" isHeader={false} />}
-                {listCourses.map((course) => <CourseListRow key={course.id} textFirstCell={course.name} textSecondCell={course.credit} isHeader={false} />)}
+                {listCourses.map((course) => <CourseListRow key={course.id} textFirstCell={course.name} textSecondCell={course.credit} isHeader={true} />)}
             </tbody>
         </table>
     )

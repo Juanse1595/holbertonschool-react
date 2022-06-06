@@ -1,5 +1,6 @@
 import { shallow } from "enzyme";
 import { CourseListRow} from "./CourseListRow";
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 describe('<CourseListRow/>', ()=> {
     it('when isHeader is true, render th with colSpan 2', ()=> {

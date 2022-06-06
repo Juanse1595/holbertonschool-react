@@ -1,6 +1,7 @@
 import { shallow } from 'enzyme';
 import { CourseList } from '../CourseList/CourseList';
 import App from './App';
+import Adapter from 'enzyme-adapter-react-16';
 
 describe('<App/>', ()=> {
     it('renders without crashing', ()=> {

@@ -1,4 +1,5 @@
-import { Footer } from '../Footer/Footer.js'
+import { Footer } from '../Footer/Footer.js';
+import Adapter from 'enzyme-adapter-react-16';
 
 describe('<Footer/>', ()=> {
     it('renders Footer component without crashing', ()=> {

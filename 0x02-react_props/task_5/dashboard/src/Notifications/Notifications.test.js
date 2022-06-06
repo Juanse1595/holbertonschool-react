@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme';
 import Notifications from './Notifications';
+import Adapter from 'enzyme-adapter-react-16';
 
 describe('<Notifications/>', ()=> {
     it('Notifications renders without crashing', () => {

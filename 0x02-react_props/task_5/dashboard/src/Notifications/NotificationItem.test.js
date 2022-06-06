@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme';
 import { NotificationItem } from './NotificationItem';
+import Adapter from 'enzyme-adapter-react-16';
 
 describe('<Notifications/>', ()=> {
     it('Test that NotificationItem renders', () => {

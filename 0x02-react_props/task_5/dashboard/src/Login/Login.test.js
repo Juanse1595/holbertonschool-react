@@ -1,5 +1,6 @@
 import { shallow } from 'enzyme';
-import { Login } from '../Login/Login.js'
+import { Login } from '../Login/Login.js';
+import Adapter from 'enzyme-adapter-react-16';
 
 describe('<Login/>', ()=> {
     it('renders Login component without crashing', ()=> {

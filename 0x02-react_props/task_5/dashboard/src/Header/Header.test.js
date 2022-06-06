@@ -1,5 +1,7 @@
 import { shallow } from 'enzyme';
-import { Header } from '../Header/Header.js'
+import { Header } from '../Header/Header.js';
+import React from 'react';
+import Adapter from 'enzyme-adapter-react-16';
 
 describe('<Header/>', ()=> {
     it('renders Header component without crashing', ()=> {

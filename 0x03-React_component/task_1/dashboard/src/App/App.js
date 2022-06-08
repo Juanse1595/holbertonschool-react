@@ -21,6 +21,18 @@ const listNotifications = [
 
 class App extends React.Component {
     render() {
+        window.addEventListener('keypress', (event) => {
+            if (event.key == 'h') {
+                alert('Logging you out');
+                this.props.logOut();
+            }
+        })
+        window.removeEventListener('keypress', (event) => {
+            if (event.key == 'h') {
+                alert('Logging you out');
+                this.props.logOut();
+            }
+        })
         return (
             <>
                 <Notifications listNotifications={listNotifications}/>

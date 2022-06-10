@@ -13,3 +13,5 @@ class BodySection extends Component {
         )
     }
 }
+
+export { BodySection }

@@ -14,3 +14,5 @@ class BodySectionWithMarginBottom extends Component {
         )
     }
 }
+
+export { BodySectionWithMarginBottom }

@@ -1,0 +1,24 @@
+div.menuItem {
+    text-align: right;
+}
+
+div.Notifications {
+    border: 1px dashed red;
+    padding: 2px;
+    width: 35%;
+    position: absolute;
+    right: 0%;
+}
+
+[data-priority='default'] {
+    color: blue;
+}
+
+[data-priority='urgent'] {
+    color: red;
+}
+
+.Notifications img {
+    width: 20px;
+    height: 20px;
+}

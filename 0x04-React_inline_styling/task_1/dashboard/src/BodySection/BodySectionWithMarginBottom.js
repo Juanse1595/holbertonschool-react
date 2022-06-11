@@ -1,6 +1,7 @@
 import {Component} from 'react';
 import {BodySection} from './BodySection';
-import './BodySectionWithMarginBottom.css';
+import { css, StyleSheet } from 'aphrodite';
+
 
 class BodySectionWithMarginBottom extends Component {
     constructor(props) {

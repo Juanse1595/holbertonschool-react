@@ -4,7 +4,9 @@ import { NotificationItem } from "./NotificationItem";
 import { getLatestNotification } from '../utils/utils';
 import close_icon from './close-icon.png';
 import PropTypes, { arrayOf } from "prop-types";
-import { NotificationItemShape } from './NotificationItemShape'
+import { NotificationItemShape } from './NotificationItemShape';
+import { css, StyleSheet } from 'aphrodite';
+
 
 class Notifications extends React.Component {
     constructor(props) {
@@ -19,7 +21,7 @@ class Notifications extends React.Component {
             <>
                 <div className="menuItem">Your notifications</div>
                 { this.props.displayDrawer &&
-                    <div className="Notifications">
+                    <div className={css(stylesNotification.panel)}>
                         <p>Here is the list of notifications</p>
                         <ul>
                             {this.props.listNotifications === [] && <NotificationItem type="default" value="No new notification for now"/>}
@@ -40,7 +42,7 @@ class Notifications extends React.Component {
                         onClick={() => {
                             console.log('Close button has been clicked')
                         }}>
-                            <img src={close_icon} alt='close-icon'></img>
+                            <img className={css(stylesNotification.closeIcon)} src={close_icon} alt='close-icon'></img>
                         </button>
                     </div>
                 }
@@ -48,6 +50,20 @@ class Notifications extends React.Component {
         );
     }
 }
+
+const stylesNotification = StyleSheet.create({
+    panel: {
+        border: '1px dashed red',
+        padding: 2,
+        width: '35%',
+        position: 'absolute',
+        right: '0%'
+    },
+    closeIcon: {
+        width: 20,
+        height: 20
+    }
+})
 
 Notifications.propTypes = {
     displayDrawer: PropTypes.bool,

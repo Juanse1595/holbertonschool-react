@@ -1,9 +1,9 @@
-import './Login.css';
+import { css, StyleSheet } from 'aphrodite';
 
 function Login() {
     return (
         <>
-          <div className="appBody">
+          <div className={css(stylesLogin.appBody)}>
             <p>Login to access the full dashboard</p>
             <label htmlFor='emailInput'>Email: </label>
             <input id='emailInput' type='text'></input>
@@ -17,7 +17,9 @@ function Login() {
 
 const stylesLogin = StyleSheet.create({
   appBody: {
-    
+    height: '100%',
+    padding: 20,
+    fontSize: '1.5rem'
   }
 })
 

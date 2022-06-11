@@ -1,5 +1,6 @@
-import './Header.css';
 import logo from '../holberton-logo.jpg'
+import { css, StyleSheet } from 'aphrodite';
+
 
 function Header() {
     return (

@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Notifications } from '../Notifications/Notifications';
 import { Login } from '../Login/Login';
 import { Footer } from '../Footer/Footer';
@@ -9,6 +8,7 @@ import { CourseList } from '../CourseList/CourseList';
 import { getLatestNotification } from '../utils/utils';
 import { BodySectionWithMarginBottom } from '../BodySection/BodySectionWithMarginBottom';
 import { BodySection } from '../BodySection/BodySection';
+import { css, StyleSheet } from 'aphrodite';
 
 const listCourses = [
     {'id': 1, 'name': 'ES6', 'credit': 60},

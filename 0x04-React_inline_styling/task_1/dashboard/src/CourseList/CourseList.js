@@ -6,7 +6,7 @@ import PropTypes, { arrayOf } from 'prop-types';
 
 function CourseList({listCourses}) {
     return (
-        <table id="CourseList">
+        <table id="CourseList" className={css(stylesCourseList.table)}>
             <thead>
                 <CourseListRow textFirstCell="Available courses" isHeader={true} />
                 <CourseListRow textFirstCell="Course name" textSecondCell="Credit" isHeader={true} />
@@ -18,6 +18,15 @@ function CourseList({listCourses}) {
         </table>
     )
 }
+
+const stylesCourseList = StyleSheet.create({
+    table: {
+        border: '1px solid',
+        width: '90%',
+        marginTop: 5,
+        borderCollapse: 'collapse'
+    }
+})
 
 CourseList.propTypes = {
     listCourses: arrayOf(CourseShape)

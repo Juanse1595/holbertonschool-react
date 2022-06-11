@@ -38,7 +38,7 @@ class App extends React.Component {
         return (
             <>
                 <Notifications listNotifications={listNotifications}/>
-                <div className='App'>
+                <div className={css(stylesApp.App)}>
                     <Header />
                     {this.props.isLoggedIn
                     ?
@@ -59,6 +59,12 @@ class App extends React.Component {
         );
     }
 }
+
+const stylesApp = StyleSheet.create({
+    App: {
+        fontFamily: 'Montserrat'
+    }
+})
 
 App.defaultProps = {
     isLoggedIn: false,

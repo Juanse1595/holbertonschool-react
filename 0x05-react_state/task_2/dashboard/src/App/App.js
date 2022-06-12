@@ -25,7 +25,13 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            displayDrawer: false
+            displayDrawer: false,
+            user: {
+                email: '',
+                password: '',
+                isLoggedIn: false
+            },
+            logOut: this.logOut
         }
     }
     handleDisplayDrawer = () => {
@@ -34,18 +40,36 @@ class App extends React.Component {
     handleHideDrawer = () => {
         this.setState({displayDrawer: false})
     }
+    logIn = (email, password) => {
+        this.setState({
+            user: {
+                email: email,
+                password: password,
+                isLoggedIn: true
+            }
+        })
+    }
+    logOut = () => {
+        this.setState({
+            user: {
+                email: '',
+                password: '',
+                isLoggedIn: false
+            }
+        })
+    }
     render() {
         const { displayDrawer } = this.state;
         window.addEventListener('keypress', (event) => {
             if (event.key === 'h') {
                 alert('Logging you out');
-                this.props.logOut();
+                this.logOut();
             }
         })
         window.removeEventListener('keypress', (event) => {
             if (event.key === 'm' && event.ctrlKey) {
                 alert('Logging you out');
-                this.props.logOut();
+                this.logOut();
             }
         })
         return (
@@ -57,14 +81,14 @@ class App extends React.Component {
                 handleHideDrawer={this.handleHideDrawer}/>
                 <div className={css(stylesApp.App)}>
                     <Header />
-                    {this.props.isLoggedIn
+                    {this.state.user.isLoggedIn
                     ?
                     <BodySectionWithMarginBottom title="Course list">
                         <CourseList listCourses={listCourses}/>
                     </BodySectionWithMarginBottom>
                     :
                     <BodySectionWithMarginBottom title="Log in to continue">
-                        <Login />
+                        <Login logIn={this.logIn}/>
                     </BodySectionWithMarginBottom>
                     }
                     <Footer />

@@ -27,22 +27,23 @@ class App extends React.Component {
         this.state = {
             displayDrawer: false
         }
-        const handleDisplayDrawer = () => {
-            this.setState({displayDrawer: true})
-        }
-        const handleHideDrawer = () => {
-            this.setState({displayDrawer: false})
-        }
+    }
+    handleDisplayDrawer = () => {
+        this.setState({displayDrawer: true})
+    }
+    handleHideDrawer = () => {
+        this.setState({displayDrawer: false})
     }
     render() {
+        const { displayDrawer } = this.state;
         window.addEventListener('keypress', (event) => {
-            if (event.key == 'h') {
+            if (event.key === 'h') {
                 alert('Logging you out');
                 this.props.logOut();
             }
         })
         window.removeEventListener('keypress', (event) => {
-            if (event.key == 'h') {
+            if (event.key === 'h') {
                 alert('Logging you out');
                 this.props.logOut();
             }
@@ -52,8 +53,8 @@ class App extends React.Component {
                 <Notifications
                 listNotifications={listNotifications}
                 displayDrawer={displayDrawer}
-                handleDisplayDrawer={handleDisplayDrawer}
-                handleHideDrawer={handleHideDrawer}/>
+                handleDisplayDrawer={this.handleDisplayDrawer}
+                handleHideDrawer={this.handleHideDrawer}/>
                 <div className={css(stylesApp.App)}>
                     <Header />
                     {this.props.isLoggedIn

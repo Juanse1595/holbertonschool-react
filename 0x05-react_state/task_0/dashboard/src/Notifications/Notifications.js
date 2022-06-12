@@ -19,7 +19,7 @@ class Notifications extends React.Component {
         return (
             <>
                 <div className={css(stylesNotification.menuItem)}>
-                    <p className={css(animationTitle.animation)}>Your notifications</p>
+                    <p className={css(animationTitle.animation)} onClick={this.props.handleDisplayDrawer}>Your notifications</p>
                 </div>
                 { this.props.displayDrawer &&
                     <div className={css(stylesNotification.panel)}>
@@ -41,7 +41,8 @@ class Notifications extends React.Component {
                         border: 'none'}}
                         aria-label='Close'
                         onClick={() => {
-                            console.log('Close button has been clicked')
+                            console.log('Close button has been clicked');
+                            this.props.handleHideDrawer();
                         }}>
                             <img className={css(stylesNotification.closeIcon)} src={close_icon} alt='close-icon'></img>
                         </button>

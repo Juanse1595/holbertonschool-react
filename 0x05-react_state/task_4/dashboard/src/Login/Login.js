@@ -53,7 +53,7 @@ class Login extends Component {
                 }
                 this.handleChangePassword(event)
                 }} />
-              {this.state.enableSubmit && <input type='submit' onSubmit={this.handleLoginSubmit}></input>}
+              {this.state.enableSubmit && <input type='submit' onSubmit={this.handleLoginSubmit()}></input>}
             </form>
           </div>
         </>

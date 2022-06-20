@@ -9,4 +9,6 @@ export const map = Immutable.Map({
   6: 'Lucas',
 });
 
-export const map2 = map.set(2, 'Benjamin');
+export const map2 = map.withMutations((mapTarget) => {
+  mapTarget.set(2, 'Benjamin').set(4, 'Oliver');
+});
